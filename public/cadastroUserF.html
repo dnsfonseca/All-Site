@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <head>
+        <title>Cadastre-se</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body id="cadastroUser">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> 
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html"><img id="logo"  src="imagens/PI-LOGO.png"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index2.html">Anunciar Imóvel</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Área do Cliente</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                            </form>
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                        <a class="nav-link" href="authentication.html">Entrar | Cadastre-se <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                     </div>
+                </nav>
+
+                <br>    
+                
+                <div id="cadastroImovel">
+                    <h1 id="cadastroUserF">Cadastro de Pessoa Física</h1>
+                    <br>
+                    <br>
+                    <div class="container">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputName4">Nome</label>
+                                <input type="name" class="form-control" id="inputName" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputTelefone">Telefone Celular</label>
+                                <input type="number" class="form-control" id="inputTelefone" placeholder="Telefone Celular">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputDataNasc">Data de Nascimento</label>
+                                <input type="text" class="form-control" id="inputDataNasc" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCPF">CPF</label>
+                                <input type="text" class="form-control" id="inputCPF" placeholder="CPF">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputSexo">Sexo</label>
+                                <select id="inputSexo" class="form-control" placeholder="Selecione seu sexo">
+                                    <option selected>Selecione seu sexo</option>
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputStreet">Rua</label>
+                                <input type="text" class="form-control" id="inputStreet" placeholder="Informe sua rua">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputNumber">Número Residencial</label>
+                                <input type="number" class="form-control" id="inputNumber" placeholder="Informe seu número residencial">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputNeighborhood">Bairro</label>
+                                <select id="inputNeighborhood" class="form-control">
+                                    <option selected>Selecione seu bairro</option>
+                                    <option>Céu Azul</option>
+                                    <option>Residencial Gramado</option>
+                                    <option>Centro</option>
+                                    <option>Vila Rosa</option>
+                                    <option>Santa Luzia</option>
+                                    <option>Planalto</option>
+                                    <option>Alto Colina</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCEP">CEP</label>
+                                <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCity">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="Cidade">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Estado</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Selecione um estado</option>
+                                    <option>Minas Gerais</option>
+                                </select>
+                            </div>
+                        </div>
+                    <center>
+                        <button type="submit"  class="btn btn-primary">Finalizar Cadastro</button>
+                    </center>
+                </div>
+        
+        <!--        <footer class="footer">
+                    <div class="container rodape">
+                        <div class="row">
+        
+                            <div class="col-md-6 contato">
+                                <h4>Contato</h4>       
+                                <ul>
+                                    <li>Telefone:(00) 0000-0000</li>
+                                    <br>
+                                    <li>E-mail: historydj@outlook.com</li>
+                                </ul>
+                            </div>
+        
+                        </div>
+                    </div>          
+                </footer>
+            -->
+                <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+                <script src="js/app.js"></script>
+                <script src="js/imovel.js"></script>
+    </body>
+</html>

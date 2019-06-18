@@ -47,9 +47,17 @@ body#authentication{
     top: 80px;
 }
 
+img#logo{
+    height: 40px;
+    width: 75px;
+}
+
 h1#cadastro{
-    position: relative;
-    left: 40%;
+    text-align: center;
+}
+
+h1#cadastroUserF{
+    text-align: center;
 }
 
 
