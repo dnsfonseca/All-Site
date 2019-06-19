@@ -1,6 +1,5 @@
-var currentUser
-
 //Função para a criação de usuários
+/*
 function createLogin(){
     var emailInput = document.getElementById('emailInput').value;
     var passwordInput = document.getElementById('passwordInput').value;
@@ -11,7 +10,7 @@ function createLogin(){
         console.log('error', error);
         alert('Este usuário já está cadastrado.')
     });
-}
+}*/
 
 //Função para login com conta Google
 function loginGoogle(){
