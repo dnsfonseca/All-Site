@@ -52,29 +52,41 @@
                     <div class="container">
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="inputName4">Nome Fantasia</label>
+                                <label for="inputName">Nome Fantasia</label>
                                 <input type="name" class="form-control" id="inputName" placeholder="Nome Fantasia">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputName4">Razão Social</label>
-                                <input type="name" class="form-control" id="inputName" placeholder="Razão Social">
+                                <label for="inputRazao">Razão Social</label>
+                                <input type="name" class="form-control" id="inputRazao" placeholder="Razão Social">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputEmail4">Email</label>
+                                <label for="inputEmail">Email</label>
                                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputTelefone">Contato</label>
-                                <input type="number" class="form-control" id="inputTelefone" placeholder="Telefone">
+                                <label for="inputPassword">Senha</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Insira uma senha">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputDataNasc">Inscrição Estadual</label>
-                                <input type="text" class="form-control" id="inputDataNasc" placeholder="Incrição Estadual">
+                                <label for="inputTelefoneCel">Telefone Celular</label>
+                                <input type="number" class="form-control" id="inputTelefoneCel" placeholder="Telefone Celular">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputCPF">CNPJ</label>
-                                <input type="text" class="form-control" id="inputCPF" placeholder="CNPJ">
-                            </div>                          
+                                <label for="inputTelefone">Telefone Residencial</label>
+                                <input type="number" class="form-control" id="inputTelefone" placeholder="Telefone Residencial">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputInscEstadual">Inscrição Estadual</label>
+                                <input type="text" class="form-control" id="inputInscEstadual" placeholder="Incrição Estadual">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCNPJ">CNPJ</label>
+                                <input type="text" class="form-control" id="inputCNPJ" placeholder="CNPJ">
+                            </div>    
+                            <div class="form-group col-md-4">
+                                <label for="inputRamo">Ramo de Atividade</label>
+                                <input type="text" class="form-control" id="inputRamo" placeholder="Função executada">
+                            </div>                      
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
@@ -104,7 +116,10 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputCity">Cidade</label>
-                                <input type="text" class="form-control" id="inputCity" placeholder="Cidade">
+                                <select id="inputCity" class="form-control">
+                                    <option selected>Selecione uma cidade</option>
+                                    <option>Patos de Minas</option>
+                                </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputState">Estado</label>
@@ -114,9 +129,7 @@
                                 </select>
                             </div>
                         </div>
-                    <center>
-                        <button type="submit"  class="btn btn-primary">Finalizar Cadastro</button>
-                    </center>
+                        <button type="submit"  class="btn btn-primary" id="conclui">Finalizar Cadastro</button>
                 </div>
         
         <!--        <footer class="footer">
@@ -136,10 +149,13 @@
                     </div>          
                 </footer>
             -->
-                <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
-                <script src="js/app.js"></script>
-                <script src="js/imovel.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+            <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+            <script src="js/app.js"></script>
+            <script src="js/pessoaJuridica.js"></script>
     </body>
 </html>
