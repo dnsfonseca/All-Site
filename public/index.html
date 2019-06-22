@@ -13,89 +13,124 @@
 		<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
 		<script src="js/app.js"></script>
 		
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> 
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
 			<div class="container">
-			  	<a class="navbar-brand" href="index.html"><img id="logo"  src="imagens/PI-LOGO.png"></a>
+			  	<a class="navbar-brand" href="index.html"><img id="logo"  src="imagens/logo3.0.png"></a>
 			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    	<span class="navbar-toggler-icon"></span>
 			  	</button>
 
 			  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    	<ul class="navbar-nav mr-auto">
-			      		<li class="nav-item active">
+			      		<li class="nav-item ">
 			        		<a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
 			      		</li>
-			      		<li class="nav-item">
+			      		<li class="nav-item ">
 			        		<a class="nav-link" href="index2.html">Anunciar Imóvel</a>
 			      		</li>
-			      		<li class="nav-item">
-			        		<a class="nav-link disabled" href="#">Área do Cliente</a>
+			      		<li class="nav-item ">
+			        		<a class="nav-link" href="#">Imóveis Disponíveis</a>
 			     		</li>
 			    	</ul>
-			    	<form class="form-inline my-2 my-lg-0">
-			      		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			     		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-			    	</form>
-			    	<ul class="navbar-nav mr-auto">
-				    	<li class="nav-item active">
-				        		<a class="nav-link" href="authentication.html">Entrar | Cadastrar-se <span class="sr-only">(current)</span></a>
-				      	</li>
-				    </ul>
+			    	
+					<div class="form-inline my-2 my-lg-0">
+							<a href="authentication.html" class="btn btn-dark">Entrar | Cadastrar-se</a>
+					</div>
 			  	</div>
 			 </div>
 		</nav>
 
-		<form class="box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 tipo-transacao ">
-						<label for="btnVenda">O que você deseja?</label>
-						<div class="buttons">
-							<button type="button" class="btn btn-outline-secondary">Alugar</button>
-							<button type="button" class="btn btn-outline-secondary">Comprar</button>
-						</div>
-						<div class="form-group col-md-12 ">
-							<label for="exampleFormControlSelect1">Qual o tipo?</label>
-						    <select class="form-control" id="exampleFormControlSelect1">
-						      <option>Selecione o tipo de imóvel</option>
-						      <option>Apartamento</option>
-						      <option>Casa</option>
-						      <option>Flat</option>
-						      <option>Kitchenette</option>
-						      <option>Cobertura</option>
-						    </select>
-						</div>
-						<div class="form-group col-md-12 ">
-							<label for="exampleFormControlSelect1">Qual a localidade?</label>
-						    <select class="form-control" id="exampleFormControlSelect1">
-						      <option>Selecione o bairro..</option>
-						      <option>Céu Azul</option>
-						      <option>Centro</option>
-						      <option>Peluzzo</option>
-						      <option>Panorâmico</option>
-						      <option>Alvorada</option>
-						    </select>
-						</div>
+		<div id="carouselExampleIndicators" class="carousel slide carrossel teste" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+			  	<div class="carousel-item active">
+					<img class="d-block w-100" src="imagens/mansaoEdit.jpg" alt="Mansão">
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="container">
+			<div class="card-deck">
+				<div class="card" style="width: 25,1rem;">
+					<br>
+					<img class="card-img-top icon-venda" src="imagens/icon-vendaPreto.png" alt="Card image cap">
+					<div class="card-body">
+						<h3 class="card-title">Anuncie seu imóvel</h3>
+						<p class="card-text">Anuncie conosco seu imóvel para venda e aluguel!<br> Nós encontraremos o melhor negócio para você.</p>
+						<a href="authentication.html" class="btn btn-dark">Anunciar Imóvel</a>
+					</div>
+				</div>
+				<div class="card" style="width: 25,1rem;">
+					<br>
+					<img class="card-img-top icon-venda" src="imagens/icons8-aprovação-filled-100.png" alt="Card image cap">
+					<div class="card-body">
+						<h3 class="card-title">Encontre seu Imóvel</h3>
+						<p class="card-text">Clique aqui e veja os imóveis disponíveis <br> em nossa rede de anúncios.<br></p>
+						<a href="#" class="btn btn-dark">Imóveis Disponíveis</a>
 					</div>
 				</div>
 			</div>
-		</form>
 
-		<footer class="footer">
-			<div class="container rodape">
-				<div class="row">
+			<br>
+			<h2> All Anúncios </h2>
+			<br>
+			<div class="col-md-12">
+				<p>
+					A comodidade em realizar as ações do dia a dia está cada vez mais facilitada pelas aplicações web. 
+					Com esse objetivo o projeto foi estabelecido para que não haja a necessidade e o incomodo do usuário se locomover até o seu desejo que adquirir uma moradia seja comprando ou alugando.
+				</p>
+				<p>
+					Como benefício damos a possibilidade de uma pessoa física ou jurídica faça publicações de seus imóveis, promovendo a interação entre ambos os usuários.
+					Nossos clientes deveram cadastrar-se para poderem efetuar o anúncio de um imóvel. 
+				</p>
+				<P>
+					Iremos avaliar as informações inseridas nos cadastros para que não haja problemas posteriores com os proprietários 
+					e também com os interessados pela compra ou locação de determinado imóvel que estará na página de anúncios. Após esta verificação, 
+					os imóveis autorizados irão ser divulgados na página, assim estando disponível para os dêmais usuários.
+				</p>
+			</div>
+			<br>
+			<h2>Sobre nós</h2>
+			<br>
+			<div class="col-md-12">
+				<p>
+					Este projeto foi criado e desenvolvido por estudantes do Centro Universitário de Patos de Minas - UNIPAM. 
+					Temos o intuito de criar novos projetos semestralmente, que são ministrados por alunos e professores responsáveis por tal.
+				</p>
+			</div>
+		</div>
 
-					<div class="col-md-6 contato">
+		<br>
+<!--
+		  <div class="card border-primary mb-3" style="max-width: 18rem;" id="card1">
+			<div class="card-header">Joao Da Silva Junior</div>
+			<div class="card-body text-primary">
+			  <h5 class="card-title">Apartamento</h5>
+			  <p class="card-text">Sala, Cozinha, 3 Quartos sendo 1 deles com suíte, Sacada etc...</p>
+			</div>
+		  </div>   -->
+
+
+<footer class="page-footer font-small pt-4" id="rodape">
+		<div class="container">
+		  	<div class="row">
+				<div class="col-md-6 mb-4 contato">
 						<h4>Contato</h4>
-						<!--<ul>
-							<li>Telefone:(00) 0000-0000</li>
-							<br>
-							<li>E-mail: historydj@outlook.com</li>
-						</ul>-->
-					</div>
-
+                            Telefone:(00) 0000-0000
+                            <br>
+                            E-mail: historydj@outlook.com
+                        </ul>
+                    </div>
 				</div>
-			</div>			
-		</footer>
+		 	 </div>
+		</div>
+		<div class="footer-copyright text-center py-3">© 2019 Copyright</div>
+	  </footer>
+	  
 	</body>
+
 </html>

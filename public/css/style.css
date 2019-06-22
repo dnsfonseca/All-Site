@@ -2,7 +2,7 @@ body#back{
     text-align: center;
     font-family: Arial, Times, Serif;
     height:100%;
-
+/*
     background-image: url(../imagens/mansao2.jpg);
     background-repeat: no-repeat;
     background-position: right top;
@@ -49,7 +49,7 @@ body#authentication{
 
 img#logo{
     height: 40px;
-    width: 75px;
+    width: 100px;
 }
 
 h1#cadastro{
@@ -59,8 +59,12 @@ h1#cadastro{
 h1#cadastroUserF{
     text-align: center;
 }
-
-
+/*
+h1#anuncio{
+    top: 300px;
+    text-align: center;
+}
+*/
 .form-group{
     position: center;
     justify-content: center;
@@ -70,28 +74,40 @@ form .container .row .tipo-transacao{
     top: 40px;
 }
 
-.footer{
-    background: black;
-    min-height: 100px;
+.rodape{
+    background: #F8F8F6;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: black;
     height: auto;
     text-align: center;
-    position: absolute;
-    bottom: 0;
 }
 
-#rodapeCadastro{
-    background: black;
-    min-height: 100px;
+#rodape{
+    background: #F8F8F6;
     position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
+    color: black;
     height: auto;
-    text-align: center;
+}
+
+.contato{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+div#card1{
+    left: 820px;
+    top: 500px;    
+}
+
+.icon-venda{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 

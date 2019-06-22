@@ -10,37 +10,32 @@
     </head>
 
     <body>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> 
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img id="logo"  src="imagens/PI-LOGO.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index2.html">Anunciar Imóvel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Área do Cliente</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-                    </form>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="authentication.html">Entrar | Cadastrar-se<span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                </div>
-             </div>
-        </nav>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
+                    <div class="container">
+                          <a class="navbar-brand" href="index.html"><img id="logo"  src="imagens/logo3.0.png"></a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+        
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="index2.html">Anunciar Imóvel</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="#">Imóveis Disponíveis</a>
+                                 </li>
+                            </ul>
+                            
+                            <div class="form-inline my-2 my-lg-0">
+                                    <a href="authentication.html" class="btn btn-dark">Entrar | Cadastrar-se</a>
+                            </div>
+                          </div>
+                     </div>
+                </nav>
 
         <br>
         
@@ -106,29 +101,29 @@
                 </div>
                 <div class="form-group">
                     <label for="string-input">Faça upload de imagens do imóvel aqui</label>
-                    <input type="file" class="form-control-file" id="file-input">
+                    <input type="file" class="form-control-file-inline" id="file-input">
                 </div>
-                <button type="submit" onclick="novoImovel()" class="btn btn-primary">Finalizar Anúncio</button>
-                
+                <center>
+                    <button type="submit" onclick="novoImovel()" class="btn btn-dark">Finalizar Anúncio</button>
+                </center>
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container rodape">
-                <div class="row">
-
-                    <div class="col-md-6 contato">
-                        <h4>Contato</h4>       
-                        <!--<ul>
-                            <li>Telefone:(00) 0000-0000</li>
-                            <br>
-                            <li>E-mail: historydj@outlook.com</li>
-                        </ul>-->
-                    </div>
-
+        <footer class="page-footer font-small pt-4 rodape">
+                <div class="container">
+                      <div class="row">
+                        <div class="col-md-6 mb-4 contato">
+                                <h4>Contato</h4>
+                                    Telefone:(00) 0000-0000
+                                    <br>
+                                    E-mail: historydj@outlook.com
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
                 </div>
-            </div>          
-        </footer>
+                <div class="footer-copyright text-center py-3">© 2019 Copyright</div>
+              </footer>
 
         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
