@@ -20,7 +20,7 @@ function loginGoogle(){
         console.log('usuario', resposta.user);
         console.log('token', resposta.credential.accessToken);
         displayName.innerText = 'Você está autenticado!';
-        //window.location.href = "index.html";
+        window.location.href = "index.html";
     }).catch(erro => {
         console.log('erro', erro);
         alert('Algo deu errado, tente novamente.')
@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+
     //Vai pegar os dados do usuário
     currentUser = firebase.auth().currentUser;
 
@@ -103,13 +104,65 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
-//Função para deletar usuário
+function novoImovel(){
+    var rua = document.getElementById('inputStreet').value;
+    var nmrResidencial = document.getElementById('inputNumber').value;
+    var bairro = document.getElementById('inputNeighborhood').value;
+    var cep = document.getElementById('inputCEP').value;
+    var cidade = document.getElementById('inputCity').value;
+    var estado = document.getElementById('inputState').value;
+    var tipo = document.getElementById('inputType').value;
+    var quartos = document.getElementById('inputBadroom').value;
+    var banheiros = document.getElementById('inputBathroom').value;
+    var user = firebase.auth().currentUser;
+    if(rua == "" || nmrResidencial == "" || bairro == "" || cep == "" || cidade == "" || estado == "" || tipo == ""
+    || quartos == "" || banheiros == ""){
+            alert('Preencha todos os campos.')
+        } else{
+                if(user){
+                    firebase.database().ref('imoveis/').push().set({
+                        rua: document.getElementById('inputStreet').value,
+                        nmrResidencial: document.getElementById('inputNumber').value,
+                        bairro: document.getElementById('inputNeighborhood').value,
+                        cep: document.getElementById('inputCEP').value,
+                        cidade: document.getElementById('inputCity').value,
+                        estado: document.getElementById('inputState').value,
+                        tipoImovel: document.getElementById('inputType').value,
+                        nmrQuartos: document.getElementById('inputBadroom').value,
+                        nmrBanheiro: document.getElementById('inputBathroom').value
+                    });
+                        alert('Anúncio efetuado com sucesso.')
+                    } else
+                        alert('Você precisa estar conectado para efetuar um anúncio.')                
+                }
+        }
 
+/*
+//Método para o envio de arquivos para o Storage do Firebase
+var ref = firebase.storage().ref('arquivos');
+stringInput.onchange = function (event){
+    var arquivo = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.readAsDataURL(arquivo);
+    reader.onload = function(){
+        const base64 = reader.result.split('base64,')[1];
+
+        ref.child('imagem').putString(base64, 'base64', { contentType: 'image/png'}).then(snapshot => {
+
+            ref.child('imagem').getDownloadURL().then(url => {
+                console.log('Imagem para download', url);
+            });
+        });
+    }
+}
+*/
+
+//Função para deletar usuário
 function deletaUsuario() {
     if(currentUser) {
         currentUser.delete().then(() => {
             alert('Usuário excluído com sucesso.')
-        })
+        });
     }
 }
-
