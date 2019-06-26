@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
     firebase.auth().onAuthStateChanged((usuario) => {
         if(usuario) {
             console.log('usuario', usuario);
-            displayName.innerText = 'Você está autenticado!';
+           // displayName.innerText = 'Você está autenticado!';
             currentUser = usuario;
 
             //Mudando o idioma do firebase
@@ -105,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function novoImovel(){
+    var nome = document.getElementById('inputName').value;
+    var email = document.getElementById('inputEmail').value;
+    var telContato = document.getElementById('inputTelefoneCont').value;
     var rua = document.getElementById('inputStreet').value;
     var nmrResidencial = document.getElementById('inputNumber').value;
     var bairro = document.getElementById('inputNeighborhood').value;
@@ -121,6 +124,9 @@ function novoImovel(){
         } else{
                 if(user){
                     firebase.database().ref('imoveis/').push().set({
+                        nome : document.getElementById('inputName').value,
+                        email : document.getElementById('inputEmail').value,
+                        telContato : document.getElementById('inputTelefoneCont').value,
                         rua: document.getElementById('inputStreet').value,
                         nmrResidencial: document.getElementById('inputNumber').value,
                         bairro: document.getElementById('inputNeighborhood').value,

@@ -111,3 +111,13 @@ div#card1{
     margin-right: auto;
 }
 
+#imoveis{
+    top: 50px;
+    text-align: center;
+}
+
+#linha {
+    border-bottom: solid 1.5px #000;
+}
+
+
