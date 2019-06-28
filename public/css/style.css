@@ -90,6 +90,26 @@ form .container .row .tipo-transacao{
     position: relative;
     color: black;
     height: auto;
+    bottom: 0;
+    padding-bottom: 30px
+}
+
+#rodape2{
+    background: #F8F8F6;
+    position: relative;
+    color: black;
+    height: auto;
+    bottom: 0;
+    padding-bottom: 30px
+}
+
+#rodape3{
+    background: #F8F8F6;
+    position: relative;
+    color: black;
+    height: auto;
+    bottom: 0;
+    padding-bottom: 30px
 }
 
 .contato{
